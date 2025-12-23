@@ -491,10 +491,10 @@
         }
 
         function cleanPokemonName(name) {
-            return name.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '');
+            return name.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9-]/g, '');
         }
 
-        // Graphic uses pokemon, rank, rankColor, nameColor, usageColor and size parameters picked by user
+        // Updated createPokemonHTML to accept rankColor, nameColor, usageColor and size parameters
         function createPokemonHTML(pokemon, rank, rankColor, nameColor, usageColor, sizes) {
             const cleanedName = cleanPokemonName(pokemon.name || pokemon.displayName);
             const spriteUrl = `https://generationssd.co.uk/sprites/home-centered/${cleanedName}.png`;
